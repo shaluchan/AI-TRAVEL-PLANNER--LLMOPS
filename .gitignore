@@ -1,4 +1,4 @@
 venv/
 .env
 __pycache__/
-AI TRAVEL/AI_TRAVEL_AGENT.egg-info/
+AI_TRAVEL_AGENT.egg-info/
