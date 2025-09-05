@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: planner-apps
+  labels:
+    app: planner
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: planner
+  template:
+    metadata:
+      labels:
+        app: planner
+    spec:
+      containers:
+        - name: planner-container
+          image: planner-app:latest
+          imagepullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8501
+          envFrom:
+            - secretRef:
+                name: llmops-secrets
+            
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: planner-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: planner
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8501
