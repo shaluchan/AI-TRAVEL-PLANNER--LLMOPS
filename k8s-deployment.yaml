@@ -17,7 +17,7 @@ spec:
       containers:
         - name: planner-container
           image: planner-app:latest
-          imagepullPolicy: IfNotPresent
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8501
           envFrom:
