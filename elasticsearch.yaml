@@ -33,7 +33,7 @@ spec:
             - name: discovery.type
               value: single-node
             - name: ES_JAVA_OPTS
-              value: "-XX:UseContainerSupport=false"
+              value: "-XX:-UseContainerSupport"
             - name: xpack.security.enabled
               value: "false"
           ports:
