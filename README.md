@@ -33,7 +33,7 @@ The main aim of this project is to **host a Streamlit-based application on Kuber
 - Clone my GitHub repository:
 
 ```
-git clone https://github.com/shaluchan/AI-TRAVEL-PLANNER--LLMOPS
+git clone https://github.com/shaluchan/AI-TRAVEL-PLANNER--LLMOPS.git
 cd AI-TRAVEL-PLANNER--LLMOPS
 ```
 - Install docker,minikube and kubectl by referring official docs.
@@ -49,7 +49,7 @@ eval $(minikube docker-env)
 ```
 - Build the image inside minikube's cluster
 ```
-docker build -t streamlit-app:latest .
+docker build -t planner-app:latest .
 ```
 - Inject secrets directly into the cluster
 ```
