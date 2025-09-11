@@ -145,15 +145,15 @@ metadata:
   labels:
     k8s-app: filebeat
 rules:
-- apiGroups: [""] # "" indicates the core API group
+- apiGroups: [""] 
   resources:
   - namespaces
   - pods
   - nodes
   verbs:
-  - get
-  - watch
-  - list
+  - get # allow the filebeat to read
+  - watch # watch for changes
+  - list # list all namespaces, pods and nodes.
 - apiGroups: ["apps"]
   resources:
     - replicasets
