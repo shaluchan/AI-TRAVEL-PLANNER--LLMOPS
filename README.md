@@ -7,7 +7,8 @@ The main aim of this project is to **host a Streamlit-based application on Kuber
 ---
 
 ## 🔍Tech Stack
-
+- **GROQ** LLM models
+- **Langchain** Generative Ai framework to interact with LLM.
 - **Docker:** Containerization of the application for easy deployment.  
 - **Kubernetes (Minikube on VM):** Orchestrating containerized apps with scaling and management.  
 - **EC2:** Hosting the Kubernetes cluster and Docker runtime.     
